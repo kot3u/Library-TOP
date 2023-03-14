@@ -45,12 +45,12 @@ function hideForm() {
   newBookBtnContainer.classList.remove('not-active');
 }
 
-function setReadStatus(evt) {
-  if (evt.textContent !== "You've read this book!") {
-    evt.parentNode.classList.add('is-read');
+function setReadStatus(target) {
+  if (target.textContent !== "You've read this book!") {
+    target.parentNode.classList.add('is-read');
     return "You've read this book!";
   }
-  evt.parentNode.classList.remove('is-read');
+  target.parentNode.classList.remove('is-read');
   return "You heve't read this book!";
 }
 
@@ -58,8 +58,8 @@ function addReadButton(div) {
   const readBtn = document.createElement('button');
   readBtn.classList.add('read-button');
   readBtn.textContent = 'Reading status';
-  readBtn.addEventListener('click', (evt) => {
-    evt.target.textContent = setReadStatus(evt.target);
+  readBtn.addEventListener('click', () => {
+    readBtn.textContent = setReadStatus(readBtn);
   });
   div.appendChild(readBtn);
 }
