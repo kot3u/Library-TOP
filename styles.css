@@ -2,3 +2,12 @@
   display: flex;
   flex-direction: column;
 }
+
+.active {
+  display: block!important;
+  
+}
+
+#input-form-container {
+  display: none;
+}
