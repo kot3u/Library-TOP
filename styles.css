@@ -27,7 +27,7 @@ main {
   gap: 20px;
 }
 
-main > div { 
+main > div {
   display: flex;
   flex-direction: column;
   background-color: #e2e8f0;
