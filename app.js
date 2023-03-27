@@ -2,10 +2,12 @@ const myLibrary = [];
 const submitBtn = document.querySelector('#submit-button');
 const newBookBtn = document.querySelector('#new-book-btn');
 
-function Book(author, tilte, pages) {
-  this.author = author;
-  this.tilte = tilte;
-  this.pages = pages;
+class Book{
+  constructor(author, tilte, pages){
+    this.author = author;
+    this.tilte = tilte;
+    this.pages = pages;
+  }
 }
 
 function deleteBook(evt, bookObject) {
